@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title> 
+    
+    
+
+    <link href="css/ionic.css" rel="stylesheet">
+    <!--link href="css/style.css" rel="stylesheet"-->
+    
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="js/ionic.bundle.js"></script>
+    <!--APPLIED FIX - didnt work on D3 chart https://forum.ionicframework.com/t/mousewheel-scrolling-stops-working-within-deeply-nested-elements/13074-->
+    <!--  (there's 2 of them!)
+    I found a solution to this by editing the getParentOrSelfWithClass function in the ionic.js file. I changed this line:
+    depth = depth || 10;
+    To this:
+    depth = depth || 20;
+    A depth check of 20 should be enough for my site, but when it was only 10 I wan't able to scroll when hovered over some elements.
+    -->
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="js/cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    
+    <script type="text/javascript" src="js/code.js"></script>
+     
+    <!--script src="js/d3.v3.min.js"></script-->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.css"/>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.7/angular-nvd3.min.js"></script>
+
+
+
+  </head>
+  
+  <body ng-app="starter" >
+    
+        <ion-nav-view>
+             
+            hello Maui!  :)
+            
+        </ion-nav-view>
+    
+  </body>
+</html>

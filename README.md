@@ -1,2 +1,2 @@
-# condos
-Jeff's Condo project
+# maui-api
+This is a python webapp API for a mortgage/rental calculator
